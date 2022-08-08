@@ -1,0 +1,48 @@
+.post {
+  display: flex;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 0 5%;
+}
+.post__name {
+  width: 33.3%;
+}
+.post__email {
+  width: 33.3%;
+}
+.post__gender {
+  width: 16.7%;
+}
+.post__status {
+  width: 16.7%;
+}
+
+.post p {
+  color: rgb(14, 0, 85);
+}
+
+@media screen and (max-width: 966px) {
+  .post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 0 5%;
+  }
+  .post__text {
+    text-align: center;
+  }
+  .post__name {
+    width: 100%;
+  }
+  .post__email {
+    width: 100%;
+  }
+  .post__gender {
+    width: 100%;
+  }
+  .post__status {
+    width: 100%;
+  }
+}
