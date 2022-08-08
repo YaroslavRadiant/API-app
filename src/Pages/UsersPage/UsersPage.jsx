@@ -47,6 +47,19 @@ export default function UsersPage() {
     setGender(event.target.value);
   };
 
+  const renderPostsList = (post) => {
+    return (
+      <PostsItem
+        key={post.id}
+        name={post.name}
+        email={post.email}
+        gender={post.gender}
+        status={post.status}
+        id={post.id}
+      />
+    );
+  };
+
   return (
     <div>
       <Container sx={{ mt: "25px" }}>
@@ -78,18 +91,7 @@ export default function UsersPage() {
           {isLoading ? (
             <CircularProgress size={"10%"} />
           ) : (
-            posts.map((post) => {
-              return (
-                <PostsItem
-                  key={post.id}
-                  name={post.name}
-                  email={post.email}
-                  gender={post.gender}
-                  status={post.status}
-                  id={post.id}
-                ></PostsItem>
-              );
-            })
+            posts.map(renderPostsList)
           )}
         </Stack>
       </Container>
